@@ -1,7 +1,50 @@
 {
-  "name": "flood-rescue-frontend",
-  "version": "1.0.0",
+  "name": "trackspace-frontend",
+  "version": "2.0.0",
   "private": true,
+  "description": "TrackSpace - Flood Rescue Coordination & Relief Management System. A comprehensive platform for managing flood rescue operations, coordinating rescue teams, tracking citizen requests, and managing relief resources in real-time.",
+  "author": {
+    "name": "TrackSpace Team",
+    "email": "team@trackspace.dev",
+    "url": "https://trackspace.dev"
+  },
+  "contributors": [
+    {
+      "name": "Tuan Hoang",
+      "email": "tuanhoang@trackspace.dev",
+      "role": "Lead Developer"
+    }
+  ],
+  "license": "MIT",
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/TuanHoang297/trackspace-frontend-.git"
+  },
+  "bugs": {
+    "url": "https://github.com/TuanHoang297/trackspace-frontend-/issues"
+  },
+  "homepage": "https://trackspace.dev",
+  "keywords": [
+    "flood-rescue",
+    "emergency-management",
+    "disaster-response",
+    "coordination-platform",
+    "react",
+    "vite",
+    "real-time",
+    "gis",
+    "mapping",
+    "leaflet",
+    "rescue-operations",
+    "relief-management",
+    "dashboard",
+    "analytics"
+  ],
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=9.0.0"
+  },
   "dependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
@@ -10,16 +53,1079 @@
     "leaflet": "^1.9.4",
     "react-leaflet": "^4.2.1",
     "@tanstack/react-query": "^5.14.2",
-    "zustand": "^4.4.7"
+    "@tanstack/react-query-devtools": "^5.14.2",
+    "zustand": "^4.4.7",
+    "chart.js": "^4.4.1",
+    "react-chartjs-2": "^5.2.0",
+    "date-fns": "^3.0.6",
+    "react-hot-toast": "^2.4.1",
+    "react-icons": "^4.12.0",
+    "framer-motion": "^10.16.16",
+    "react-beautiful-dnd": "^13.1.1",
+    "react-select": "^5.8.0",
+    "react-datepicker": "^4.25.0",
+    "react-tooltip": "^5.25.1",
+    "react-markdown": "^9.0.1",
+    "recharts": "^2.10.3",
+    "lodash": "^4.17.21",
+    "dayjs": "^1.11.10",
+    "clsx": "^2.1.0",
+    "uuid": "^9.0.0",
+    "@headlessui/react": "^1.7.18",
+    "@heroicons/react": "^2.1.1",
+    "socket.io-client": "^4.7.4",
+    "react-hook-form": "^7.49.3",
+    "@hookform/resolvers": "^3.3.4",
+    "zod": "^3.22.4",
+    "react-table": "^7.8.0",
+    "@tanstack/react-table": "^8.11.2",
+    "react-toastify": "^9.1.3",
+    "react-dropzone": "^14.2.3",
+    "react-dnd": "^16.0.1",
+    "react-dnd-html5-backend": "^16.0.1",
+    "react-virtualized": "^9.22.5",
+    "react-window": "^1.8.10",
+    "react-intersection-observer": "^9.8.0",
+    "react-infinite-scroll-component": "^6.1.0",
+    "react-error-boundary": "^4.0.12",
+    "react-helmet-async": "^2.0.3",
+    "react-spring": "^9.7.3",
+    "react-use": "^17.5.0",
+    "react-modal": "^3.16.1",
+    "react-tabs": "^6.0.2",
+    "react-copy-to-clipboard": "^5.1.0",
+    "react-color": "^2.19.3",
+    "react-csv": "^2.2.2",
+    "react-pdf": "^7.6.0",
+    "react-qr-code": "^2.0.12",
+    "react-player": "^2.14.1",
+    "react-image-crop": "^11.0.4",
+    "react-lazy-load-image-component": "^1.6.0",
+    "react-countup": "^6.5.0",
+    "react-circular-progressbar": "^2.1.0",
+    "react-loading-skeleton": "^3.4.0",
+    "react-responsive": "^9.0.2",
+    "react-joyride": "^2.7.2",
+    "@react-google-maps/api": "^2.19.3",
+    "mapbox-gl": "^3.1.0",
+    "react-map-gl": "^7.1.7",
+    "@turf/turf": "^6.5.0",
+    "leaflet-draw": "^1.0.4",
+    "leaflet-routing-machine": "^3.2.12",
+    "leaflet.markercluster": "^1.5.3",
+    "leaflet.heat": "^0.2.0",
+    "leaflet-control-geocoder": "^2.4.0",
+    "i18next": "^23.7.16",
+    "react-i18next": "^14.0.1",
+    "i18next-browser-languagedetector": "^7.2.0",
+    "i18next-http-backend": "^2.4.2",
+    "formik": "^2.4.5",
+    "yup": "^1.3.3",
+    "jwt-decode": "^4.0.0",
+    "crypto-js": "^4.2.0",
+    "dompurify": "^3.0.8",
+    "marked": "^11.1.1",
+    "highlight.js": "^11.9.0",
+    "prismjs": "^1.29.0",
+    "html2canvas": "^1.4.1",
+    "jspdf": "^2.5.1",
+    "xlsx": "^0.18.5",
+    "file-saver": "^2.0.5",
+    "compressorjs": "^1.2.1",
+    "fuse.js": "^7.0.0",
+    "immer": "^10.0.3",
+    "classnames": "^2.5.1",
+    "prop-types": "^15.8.1",
+    "qs": "^6.11.2",
+    "numeral": "^2.0.6",
+    "currency.js": "^2.0.4",
+    "color": "^4.2.3",
+    "tinycolor2": "^1.6.0",
+    "validator": "^13.11.0",
+    "nanoid": "^5.0.4",
+    "mitt": "^3.0.1",
+    "eventemitter3": "^5.0.1",
+    "@sentry/react": "^7.91.0",
+    "@sentry/tracing": "^7.91.0",
+    "lottie-react": "^2.4.0",
+    "swiper": "^11.0.5",
+    "embla-carousel-react": "^8.0.0",
+    "react-slick": "^0.30.1",
+    "slick-carousel": "^1.8.1",
+    "@dnd-kit/core": "^6.1.0",
+    "@dnd-kit/sortable": "^8.0.0",
+    "@dnd-kit/utilities": "^3.2.2",
+    "d3": "^7.8.5",
+    "victory": "^36.9.2",
+    "nivo": "^0.84.0",
+    "@nivo/core": "^0.84.0",
+    "@nivo/bar": "^0.84.0",
+    "@nivo/line": "^0.84.0",
+    "@nivo/pie": "^0.84.0",
+    "@nivo/geo": "^0.84.0",
+    "@nivo/heatmap": "^0.84.0",
+    "@nivo/treemap": "^0.84.0",
+    "@nivo/radar": "^0.84.0",
+    "@nivo/funnel": "^0.84.0",
+    "react-vis": "^1.12.1",
+    "apexcharts": "^3.45.1",
+    "react-apexcharts": "^1.4.1",
+    "lightweight-charts": "^4.1.1",
+    "pdfmake": "^0.2.9",
+    "papaparse": "^5.4.1",
+    "react-json-view": "^1.21.3",
+    "react-syntax-highlighter": "^15.5.0",
+    "react-ace": "^10.1.0",
+    "ace-builds": "^1.32.3",
+    "@monaco-editor/react": "^4.6.0",
+    "country-flag-icons": "^1.5.9",
+    "emoji-mart": "^5.5.2",
+    "draft-js": "^0.11.7",
+    "react-draft-wysiwyg": "^1.15.0",
+    "react-quill": "^2.0.0",
+    "@tiptap/react": "^2.1.16",
+    "@tiptap/starter-kit": "^2.1.16",
+    "@tiptap/extension-image": "^2.1.16",
+    "@tiptap/extension-link": "^2.1.16",
+    "@tiptap/extension-table": "^2.1.16",
+    "@tiptap/extension-placeholder": "^2.1.16",
+    "@tiptap/extension-highlight": "^2.1.16",
+    "@tiptap/extension-text-align": "^2.1.16",
+    "@tiptap/extension-underline": "^2.1.16",
+    "react-big-calendar": "^1.8.5",
+    "fullcalendar": "^6.1.10",
+    "@fullcalendar/react": "^6.1.10",
+    "@fullcalendar/daygrid": "^6.1.10",
+    "@fullcalendar/timegrid": "^6.1.10",
+    "@fullcalendar/interaction": "^6.1.10",
+    "@fullcalendar/list": "^6.1.10",
+    "react-mentions": "^4.4.10",
+    "react-tag-input": "^6.8.1",
+    "downshift": "^8.3.1",
+    "cmdk": "^0.2.0",
+    "@radix-ui/react-dialog": "^1.0.5",
+    "@radix-ui/react-dropdown-menu": "^2.0.6",
+    "@radix-ui/react-popover": "^1.0.7",
+    "@radix-ui/react-tooltip": "^1.0.7",
+    "@radix-ui/react-accordion": "^1.1.2",
+    "@radix-ui/react-avatar": "^1.0.4",
+    "@radix-ui/react-checkbox": "^1.0.4",
+    "@radix-ui/react-context-menu": "^2.1.5",
+    "@radix-ui/react-hover-card": "^1.0.7",
+    "@radix-ui/react-label": "^2.0.2",
+    "@radix-ui/react-menubar": "^1.0.4",
+    "@radix-ui/react-navigation-menu": "^1.1.4",
+    "@radix-ui/react-progress": "^1.0.3",
+    "@radix-ui/react-radio-group": "^1.1.3",
+    "@radix-ui/react-scroll-area": "^1.0.5",
+    "@radix-ui/react-select": "^2.0.0",
+    "@radix-ui/react-separator": "^1.0.3",
+    "@radix-ui/react-slider": "^1.1.2",
+    "@radix-ui/react-switch": "^1.0.3",
+    "@radix-ui/react-tabs": "^1.0.4",
+    "@radix-ui/react-toast": "^1.1.5",
+    "@radix-ui/react-toggle": "^1.0.3",
+    "@radix-ui/react-toggle-group": "^1.0.4",
+    "@radix-ui/react-collapsible": "^1.0.3",
+    "@radix-ui/react-aspect-ratio": "^1.0.3",
+    "@radix-ui/react-alert-dialog": "^1.0.5",
+    "vaul": "^0.8.0",
+    "sonner": "^1.3.1",
+    "@floating-ui/react": "^0.26.5",
+    "react-aria": "^3.31.1",
+    "react-stately": "^3.29.0"
   },
   "devDependencies": {
     "@vitejs/plugin-react": "^4.2.1",
+    "@vitejs/plugin-react-swc": "^3.5.0",
     "vite": "^5.0.8",
-    "eslint": "^8.55.0"
+    "vite-plugin-svgr": "^4.2.0",
+    "vite-plugin-compression": "^0.5.1",
+    "vite-plugin-pwa": "^0.17.4",
+    "vite-plugin-checker": "^0.6.2",
+    "vite-plugin-inspect": "^0.8.1",
+    "vite-plugin-dts": "^3.7.0",
+    "vite-plugin-pages": "^0.32.0",
+    "vite-plugin-mock": "^3.0.1",
+    "vite-plugin-html": "^3.2.2",
+    "vite-plugin-style-import": "^2.0.0",
+    "rollup-plugin-visualizer": "^5.11.0",
+    "eslint": "^8.55.0",
+    "eslint-plugin-react": "^7.33.2",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-refresh": "^0.4.5",
+    "eslint-plugin-jsx-a11y": "^6.8.0",
+    "eslint-plugin-import": "^2.29.1",
+    "eslint-plugin-unused-imports": "^3.0.0",
+    "eslint-plugin-simple-import-sort": "^10.0.0",
+    "eslint-plugin-testing-library": "^6.2.0",
+    "eslint-plugin-jest-dom": "^5.1.0",
+    "eslint-plugin-storybook": "^0.6.15",
+    "eslint-plugin-security": "^2.1.0",
+    "eslint-plugin-no-secrets": "^0.8.9",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "prettier": "^3.1.1",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-prettier": "^5.1.2",
+    "@typescript-eslint/eslint-plugin": "^6.17.0",
+    "@typescript-eslint/parser": "^6.17.0",
+    "typescript": "^5.3.3",
+    "vitest": "^1.1.3",
+    "@vitest/ui": "^1.1.3",
+    "@vitest/coverage-v8": "^1.1.3",
+    "@vitest/coverage-istanbul": "^1.1.3",
+    "@testing-library/react": "^14.1.2",
+    "@testing-library/jest-dom": "^6.1.6",
+    "@testing-library/user-event": "^14.5.2",
+    "@testing-library/react-hooks": "^8.0.1",
+    "jsdom": "^23.1.0",
+    "msw": "^2.0.14",
+    "@mswjs/data": "^0.16.1",
+    "@faker-js/faker": "^8.3.1",
+    "cypress": "^13.6.2",
+    "@cypress/react": "^8.0.0",
+    "@cypress/code-coverage": "^3.12.17",
+    "cypress-axe": "^1.5.0",
+    "cypress-real-events": "^1.12.0",
+    "playwright": "^1.40.1",
+    "@playwright/test": "^1.40.1",
+    "storybook": "^7.6.7",
+    "@storybook/react": "^7.6.7",
+    "@storybook/react-vite": "^7.6.7",
+    "@storybook/addon-essentials": "^7.6.7",
+    "@storybook/addon-interactions": "^7.6.7",
+    "@storybook/addon-links": "^7.6.7",
+    "@storybook/addon-a11y": "^7.6.7",
+    "@storybook/addon-viewport": "^7.6.7",
+    "@storybook/addon-designs": "^7.0.7",
+    "@storybook/testing-library": "^0.2.2",
+    "@storybook/blocks": "^7.6.7",
+    "chromatic": "^10.2.0",
+    "husky": "^8.0.3",
+    "lint-staged": "^15.2.0",
+    "commitlint": "^18.4.3",
+    "@commitlint/cli": "^18.4.3",
+    "@commitlint/config-conventional": "^18.4.3",
+    "cz-conventional-changelog": "^3.3.0",
+    "commitizen": "^4.3.0",
+    "standard-version": "^9.5.0",
+    "semantic-release": "^22.0.12",
+    "@semantic-release/changelog": "^6.0.3",
+    "@semantic-release/git": "^10.0.1",
+    "@semantic-release/github": "^9.2.6",
+    "@semantic-release/npm": "^11.0.2",
+    "plop": "^4.0.1",
+    "hygen": "^6.2.11",
+    "concurrently": "^8.2.2",
+    "cross-env": "^7.0.3",
+    "dotenv": "^16.3.1",
+    "dotenv-cli": "^7.3.0",
+    "env-cmd": "^10.1.0",
+    "npm-run-all": "^4.1.5",
+    "rimraf": "^5.0.5",
+    "source-map-explorer": "^2.5.3",
+    "webpack-bundle-analyzer": "^4.10.1",
+    "bundlesize": "^0.18.2",
+    "lighthouse": "^11.4.0",
+    "stylelint": "^16.1.0",
+    "stylelint-config-standard": "^36.0.0",
+    "stylelint-order": "^6.0.4",
+    "postcss": "^8.4.33",
+    "postcss-preset-env": "^9.3.0",
+    "postcss-import": "^16.0.0",
+    "postcss-nested": "^6.0.1",
+    "postcss-custom-media": "^10.0.2",
+    "autoprefixer": "^10.4.16",
+    "cssnano": "^6.0.3",
+    "sass": "^1.69.7",
+    "less": "^4.2.0",
+    "@svgr/webpack": "^8.1.0",
+    "depcheck": "^1.4.7",
+    "madge": "^6.1.0",
+    "license-checker": "^25.0.1",
+    "snyk": "^1.1269.0",
+    "npm-check-updates": "^16.14.12"
   },
   "scripts": {
-    "dev": "vite",
+    "dev": "vite --host 0.0.0.0 --port 3000",
+    "dev:staging": "cross-env VITE_APP_ENV=staging vite --host 0.0.0.0 --port 3001",
+    "dev:production": "cross-env VITE_APP_ENV=production vite --host 0.0.0.0 --port 3002",
+    "dev:debug": "cross-env DEBUG=true vite --host 0.0.0.0 --port 3000",
+    "dev:mock": "concurrently \"npm run dev\" \"npm run mock:server\"",
     "build": "vite build",
-    "preview": "vite preview"
-  }
+    "build:staging": "cross-env VITE_APP_ENV=staging vite build",
+    "build:production": "cross-env VITE_APP_ENV=production vite build",
+    "build:analyze": "cross-env ANALYZE=true vite build",
+    "build:profile": "vite build --mode production && source-map-explorer 'dist/assets/*.js'",
+    "build:report": "vite build && npx vite-bundle-visualizer",
+    "preview": "vite preview --host 0.0.0.0 --port 4173",
+    "preview:staging": "cross-env VITE_APP_ENV=staging vite preview --port 4174",
+    "start": "npm run dev",
+    "serve": "npm run preview",
+    "clean": "rimraf dist node_modules/.vite .eslintcache",
+    "clean:all": "rimraf dist node_modules .eslintcache coverage storybook-static",
+    "clean:cache": "rimraf node_modules/.vite node_modules/.cache",
+    "reinstall": "npm run clean:all && npm install",
+    "lint": "eslint . --ext .js,.jsx,.ts,.tsx --report-unused-disable-directives --max-warnings 0",
+    "lint:fix": "eslint . --ext .js,.jsx,.ts,.tsx --fix",
+    "lint:quiet": "eslint . --ext .js,.jsx,.ts,.tsx --quiet",
+    "lint:staged": "lint-staged",
+    "lint:css": "stylelint 'src/**/*.{css,scss,less}'",
+    "lint:css:fix": "stylelint 'src/**/*.{css,scss,less}' --fix",
+    "format": "prettier --write \"src/**/*.{js,jsx,ts,tsx,css,json,md}\"",
+    "format:check": "prettier --check \"src/**/*.{js,jsx,ts,tsx,css,json,md}\"",
+    "format:staged": "prettier --write --staged",
+    "typecheck": "tsc --noEmit --skipLibCheck",
+    "typecheck:watch": "tsc --noEmit --skipLibCheck --watch",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:ui": "vitest --ui",
+    "test:coverage": "vitest run --coverage",
+    "test:coverage:ui": "vitest --coverage --ui",
+    "test:coverage:report": "vitest run --coverage --reporter=html",
+    "test:e2e": "cypress run",
+    "test:e2e:open": "cypress open",
+    "test:e2e:ci": "cypress run --browser chrome --headless",
+    "test:e2e:record": "cypress run --record --key $CYPRESS_RECORD_KEY",
+    "test:e2e:component": "cypress run --component",
+    "test:playwright": "playwright test",
+    "test:playwright:ui": "playwright test --ui",
+    "test:playwright:headed": "playwright test --headed",
+    "test:playwright:debug": "playwright test --debug",
+    "test:a11y": "cypress run --spec 'cypress/e2e/accessibility/**'",
+    "test:performance": "lighthouse http://localhost:3000 --output=json --output-path=./reports/lighthouse.json",
+    "test:visual": "npx percy exec -- cypress run",
+    "test:all": "npm-run-all --parallel lint typecheck test test:e2e",
+    "storybook": "storybook dev -p 6006",
+    "storybook:build": "storybook build",
+    "storybook:deploy": "storybook build && npx chromatic --project-token=$CHROMATIC_TOKEN",
+    "storybook:test": "test-storybook",
+    "mock:server": "node scripts/mock-server.js",
+    "generate": "plop",
+    "generate:component": "plop component",
+    "generate:page": "plop page",
+    "generate:hook": "plop hook",
+    "generate:service": "plop service",
+    "generate:context": "plop context",
+    "generate:test": "plop test",
+    "docker:build": "docker build -t trackspace-frontend .",
+    "docker:run": "docker run -p 3000:80 trackspace-frontend",
+    "docker:compose": "docker-compose up -d",
+    "docker:compose:down": "docker-compose down",
+    "docker:compose:build": "docker-compose build --no-cache",
+    "deploy": "npm run build:production && npm run deploy:upload",
+    "deploy:staging": "npm run build:staging && npm run deploy:upload:staging",
+    "deploy:preview": "npx vercel --yes",
+    "deploy:production": "npx vercel --prod --yes",
+    "deploy:upload": "node scripts/deploy.js",
+    "deploy:upload:staging": "cross-env DEPLOY_ENV=staging node scripts/deploy.js",
+    "deploy:cloudflare": "npm run build:production && npx wrangler pages publish dist",
+    "deploy:netlify": "npm run build:production && npx netlify deploy --prod --dir=dist",
+    "release": "standard-version",
+    "release:minor": "standard-version --release-as minor",
+    "release:major": "standard-version --release-as major",
+    "release:patch": "standard-version --release-as patch",
+    "release:dry": "standard-version --dry-run",
+    "commit": "cz",
+    "prepare": "husky install",
+    "precommit": "lint-staged",
+    "prepush": "npm run test && npm run lint",
+    "postinstall": "husky install",
+    "audit:deps": "npm audit --production",
+    "audit:licenses": "license-checker --summary",
+    "audit:security": "snyk test",
+    "audit:deps:fix": "npm audit fix",
+    "audit:outdated": "npm outdated --long",
+    "deps:check": "depcheck",
+    "deps:update": "npm-check-updates -u",
+    "deps:update:interactive": "npm-check-updates -i",
+    "deps:circular": "madge --circular src/",
+    "deps:graph": "madge --image dependency-graph.svg src/",
+    "analyze:bundle": "source-map-explorer 'dist/assets/*.js'",
+    "analyze:webpack": "webpack-bundle-analyzer dist/stats.json",
+    "analyze:size": "bundlesize",
+    "analyze:deps": "depcheck --ignores 'eslint-*,@types/*,prettier,husky'",
+    "i18n:extract": "node scripts/extract-translations.js",
+    "i18n:check": "node scripts/check-translations.js",
+    "i18n:sync": "node scripts/sync-translations.js",
+    "db:seed": "node scripts/seed-mock-data.js",
+    "db:reset": "node scripts/reset-mock-data.js",
+    "docs:generate": "typedoc --out docs/api src/",
+    "docs:serve": "npx serve docs/api",
+    "health:check": "node scripts/health-check.js",
+    "perf:audit": "lighthouse http://localhost:3000 --view",
+    "validate": "npm-run-all --parallel lint typecheck test build"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all",
+      "not safari < 14",
+      "not ios_saf < 14",
+      "not and_uc > 0",
+      "not kaios > 0"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version",
+      "last 1 edge version"
+    ]
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": [
+      "eslint --fix --max-warnings 0",
+      "prettier --write",
+      "vitest related --run"
+    ],
+    "*.{css,scss,less}": [
+      "stylelint --fix",
+      "prettier --write"
+    ],
+    "*.{json,md,yml,yaml}": [
+      "prettier --write"
+    ],
+    "*.{png,jpeg,jpg,gif,svg}": [
+      "imagemin-lint-staged"
+    ]
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ],
+    "rules": {
+      "type-enum": [
+        2,
+        "always",
+        [
+          "feat",
+          "fix",
+          "docs",
+          "style",
+          "refactor",
+          "perf",
+          "test",
+          "build",
+          "ci",
+          "chore",
+          "revert",
+          "wip",
+          "release",
+          "security",
+          "deps",
+          "config",
+          "i18n",
+          "a11y",
+          "ux"
+        ]
+      ],
+      "type-case": [2, "always", "lower-case"],
+      "type-empty": [2, "never"],
+      "scope-case": [2, "always", "lower-case"],
+      "subject-case": [2, "never", ["sentence-case", "start-case", "pascal-case", "upper-case"]],
+      "subject-empty": [2, "never"],
+      "subject-full-stop": [2, "never", "."],
+      "subject-min-length": [2, "always", 10],
+      "subject-max-length": [2, "always", 100],
+      "header-max-length": [2, "always", 120],
+      "body-leading-blank": [2, "always"],
+      "body-max-line-length": [2, "always", 200],
+      "footer-leading-blank": [2, "always"],
+      "footer-max-line-length": [2, "always", 200]
+    }
+  },
+  "config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog",
+      "maxHeaderWidth": 120,
+      "maxLineWidth": 200,
+      "defaultType": "feat",
+      "defaultScope": "",
+      "defaultSubject": "",
+      "defaultBody": "",
+      "defaultIssues": "",
+      "types": {
+        "feat": {
+          "description": "A new feature or enhancement",
+          "title": "Features"
+        },
+        "fix": {
+          "description": "A bug fix",
+          "title": "Bug Fixes"
+        },
+        "docs": {
+          "description": "Documentation only changes",
+          "title": "Documentation"
+        },
+        "style": {
+          "description": "Changes that do not affect the meaning of the code",
+          "title": "Styles"
+        },
+        "refactor": {
+          "description": "A code change that neither fixes a bug nor adds a feature",
+          "title": "Code Refactoring"
+        },
+        "perf": {
+          "description": "A code change that improves performance",
+          "title": "Performance Improvements"
+        },
+        "test": {
+          "description": "Adding missing tests or correcting existing tests",
+          "title": "Tests"
+        },
+        "build": {
+          "description": "Changes that affect the build system or external dependencies",
+          "title": "Builds"
+        },
+        "ci": {
+          "description": "Changes to CI configuration files and scripts",
+          "title": "Continuous Integration"
+        },
+        "chore": {
+          "description": "Other changes that don't modify src or test files",
+          "title": "Chores"
+        },
+        "revert": {
+          "description": "Reverts a previous commit",
+          "title": "Reverts"
+        },
+        "security": {
+          "description": "Security vulnerability fix or improvement",
+          "title": "Security"
+        }
+      }
+    }
+  },
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "browser": true,
+      "es2024": true,
+      "node": true,
+      "jest": true
+    },
+    "extends": [
+      "eslint:recommended",
+      "plugin:react/recommended",
+      "plugin:react/jsx-runtime",
+      "plugin:react-hooks/recommended",
+      "plugin:jsx-a11y/recommended",
+      "plugin:import/recommended",
+      "plugin:testing-library/react",
+      "plugin:jest-dom/recommended",
+      "plugin:storybook/recommended",
+      "prettier"
+    ],
+    "parserOptions": {
+      "ecmaVersion": "latest",
+      "sourceType": "module",
+      "ecmaFeatures": {
+        "jsx": true
+      }
+    },
+    "plugins": [
+      "react",
+      "react-hooks",
+      "react-refresh",
+      "jsx-a11y",
+      "import",
+      "unused-imports",
+      "simple-import-sort",
+      "testing-library",
+      "jest-dom",
+      "security"
+    ],
+    "settings": {
+      "react": {
+        "version": "detect"
+      },
+      "import/resolver": {
+        "node": {
+          "extensions": [".js", ".jsx", ".ts", ".tsx"]
+        },
+        "alias": {
+          "map": [
+            ["@", "./src"],
+            ["@components", "./src/components"],
+            ["@pages", "./src/pages"],
+            ["@hooks", "./src/hooks"],
+            ["@services", "./src/services"],
+            ["@utils", "./src/utils"],
+            ["@contexts", "./src/contexts"],
+            ["@config", "./src/config"],
+            ["@styles", "./src/styles"],
+            ["@assets", "./src/assets"],
+            ["@constants", "./src/constants"],
+            ["@types", "./src/types"],
+            ["@api", "./src/api"],
+            ["@store", "./src/store"],
+            ["@layouts", "./src/layouts"],
+            ["@features", "./src/features"],
+            ["@lib", "./src/lib"]
+          ],
+          "extensions": [".js", ".jsx", ".ts", ".tsx", ".json"]
+        }
+      }
+    },
+    "rules": {
+      "react-refresh/only-export-components": ["warn", { "allowConstantExport": true }],
+      "react/prop-types": "off",
+      "react/react-in-jsx-scope": "off",
+      "react/jsx-no-target-blank": ["error", { "enforceDynamicLinks": "always" }],
+      "react/jsx-key": ["error", { "checkFragmentShorthand": true }],
+      "react/jsx-no-useless-fragment": ["warn", { "allowExpressions": true }],
+      "react/jsx-curly-brace-presence": ["warn", { "props": "never", "children": "never" }],
+      "react/self-closing-comp": ["warn", { "component": true, "html": true }],
+      "react/no-array-index-key": "warn",
+      "react/no-danger": "error",
+      "react/no-deprecated": "error",
+      "react/no-unstable-nested-components": ["error", { "allowAsProps": true }],
+      "react/function-component-definition": ["warn", {
+        "namedComponents": "function-declaration",
+        "unnamedComponents": "arrow-function"
+      }],
+      "react/jsx-pascal-case": ["error", { "allowAllCaps": true }],
+      "react/jsx-boolean-value": ["warn", "never"],
+      "react/jsx-fragments": ["warn", "syntax"],
+      "react/hook-use-state": "warn",
+      "react/jsx-no-constructed-context-values": "error",
+      "react/no-object-type-as-default-prop": "warn",
+      "react-hooks/rules-of-hooks": "error",
+      "react-hooks/exhaustive-deps": "warn",
+      "import/no-unresolved": "off",
+      "import/no-duplicates": "error",
+      "import/no-cycle": ["error", { "maxDepth": 3 }],
+      "import/no-self-import": "error",
+      "import/no-useless-path-segments": "error",
+      "import/first": "error",
+      "import/newline-after-import": "error",
+      "import/no-named-as-default": "warn",
+      "import/no-named-as-default-member": "warn",
+      "import/no-anonymous-default-export": "warn",
+      "simple-import-sort/imports": ["error", {
+        "groups": [
+          ["^react", "^@?\\w"],
+          ["^@/(components|pages|hooks|services|utils|contexts|config|styles|assets|constants|types|api|store|layouts|features|lib)(/.*|$)"],
+          ["^\\.\\.(?!/?$)", "^\\.\\./?$"],
+          ["^\\./(?=.*/)(?!/?$)", "^\\.(?!/?$)", "^\\./?$"],
+          ["^.+\\.s?css$"]
+        ]
+      }],
+      "simple-import-sort/exports": "error",
+      "unused-imports/no-unused-imports": "error",
+      "unused-imports/no-unused-vars": ["warn", {
+        "vars": "all",
+        "varsIgnorePattern": "^_",
+        "args": "after-used",
+        "argsIgnorePattern": "^_"
+      }],
+      "jsx-a11y/anchor-is-valid": ["error", {
+        "components": ["Link"],
+        "specialLink": ["to"],
+        "aspects": ["invalidHref", "preferButton"]
+      }],
+      "jsx-a11y/click-events-have-key-events": "warn",
+      "jsx-a11y/no-static-element-interactions": "warn",
+      "jsx-a11y/img-redundant-alt": "error",
+      "jsx-a11y/label-has-associated-control": ["error", { "assert": "either" }],
+      "security/detect-object-injection": "off",
+      "security/detect-non-literal-regexp": "warn",
+      "security/detect-unsafe-regex": "error",
+      "security/detect-buffer-noassert": "error",
+      "security/detect-eval-with-expression": "error",
+      "security/detect-no-csrf-before-method-override": "error",
+      "security/detect-possible-timing-attacks": "warn",
+      "no-console": ["warn", { "allow": ["warn", "error", "info"] }],
+      "no-debugger": "error",
+      "no-alert": "warn",
+      "no-var": "error",
+      "prefer-const": "error",
+      "prefer-template": "warn",
+      "prefer-destructuring": ["warn", { "object": true, "array": false }],
+      "prefer-arrow-callback": "warn",
+      "prefer-rest-params": "error",
+      "prefer-spread": "error",
+      "no-param-reassign": ["error", { "props": false }],
+      "no-shadow": "error",
+      "no-unused-expressions": ["error", { "allowShortCircuit": true, "allowTernary": true }],
+      "no-return-await": "error",
+      "no-await-in-loop": "warn",
+      "no-promise-executor-return": "error",
+      "require-atomic-updates": "error",
+      "no-unmodified-loop-condition": "error",
+      "no-constant-binary-expression": "error",
+      "no-new-native-nonconstructor": "error",
+      "no-duplicate-imports": "off",
+      "object-shorthand": ["warn", "always"],
+      "arrow-body-style": ["warn", "as-needed"],
+      "curly": ["error", "all"],
+      "eqeqeq": ["error", "always"],
+      "no-eval": "error",
+      "no-implied-eval": "error",
+      "no-extend-native": "error",
+      "no-extra-bind": "error",
+      "no-floating-decimal": "error",
+      "no-implicit-coercion": ["warn", { "allow": ["!!"] }],
+      "no-lone-blocks": "error",
+      "no-new-wrappers": "error",
+      "no-throw-literal": "error",
+      "no-useless-concat": "warn",
+      "no-useless-rename": "error",
+      "no-useless-return": "warn",
+      "radix": "error",
+      "spaced-comment": ["warn", "always", { "markers": ["/"] }],
+      "max-depth": ["warn", 4],
+      "max-nested-callbacks": ["warn", 4],
+      "max-params": ["warn", 5],
+      "max-lines-per-function": ["warn", { "max": 300, "skipBlankLines": true, "skipComments": true }],
+      "max-lines": ["warn", { "max": 500, "skipBlankLines": true, "skipComments": true }],
+      "complexity": ["warn", 20],
+      "no-restricted-imports": ["error", {
+        "paths": [
+          {
+            "name": "lodash",
+            "message": "Import specific lodash functions instead: import debounce from 'lodash/debounce'"
+          },
+          {
+            "name": "moment",
+            "message": "Use date-fns or dayjs instead of moment."
+          }
+        ],
+        "patterns": [
+          {
+            "group": ["../**/.*"],
+            "message": "Do not import from relative paths using dot notation beyond the parent."
+          }
+        ]
+      }],
+      "no-restricted-globals": [
+        "error",
+        {
+          "name": "event",
+          "message": "Use local event parameter instead of the global 'event' object."
+        },
+        {
+          "name": "fdescribe",
+          "message": "Do not commit fdescribe. Use describe instead."
+        },
+        {
+          "name": "fit",
+          "message": "Do not commit fit. Use it instead."
+        }
+      ]
+    },
+    "overrides": [
+      {
+        "files": ["**/*.test.{js,jsx,ts,tsx}", "**/*.spec.{js,jsx,ts,tsx}"],
+        "env": {
+          "jest": true
+        },
+        "rules": {
+          "max-lines-per-function": "off",
+          "max-nested-callbacks": "off",
+          "no-restricted-imports": "off"
+        }
+      },
+      {
+        "files": ["**/*.stories.{js,jsx,ts,tsx}"],
+        "rules": {
+          "import/no-anonymous-default-export": "off",
+          "max-lines-per-function": "off"
+        }
+      },
+      {
+        "files": ["scripts/**/*.js", "config/**/*.js"],
+        "env": {
+          "node": true
+        },
+        "rules": {
+          "no-console": "off"
+        }
+      }
+    ]
+  },
+  "prettier": {
+    "semi": true,
+    "singleQuote": true,
+    "trailingComma": "es5",
+    "tabWidth": 2,
+    "useTabs": false,
+    "printWidth": 100,
+    "bracketSpacing": true,
+    "bracketSameLine": false,
+    "arrowParens": "always",
+    "endOfLine": "lf",
+    "quoteProps": "as-needed",
+    "jsxSingleQuote": false,
+    "htmlWhitespaceSensitivity": "css",
+    "embeddedLanguageFormatting": "auto",
+    "singleAttributePerLine": false,
+    "proseWrap": "preserve",
+    "overrides": [
+      {
+        "files": "*.css",
+        "options": {
+          "singleQuote": false,
+          "tabWidth": 2
+        }
+      },
+      {
+        "files": "*.md",
+        "options": {
+          "proseWrap": "always",
+          "tabWidth": 2
+        }
+      },
+      {
+        "files": ["*.json", ".prettierrc", ".eslintrc"],
+        "options": {
+          "tabWidth": 2
+        }
+      },
+      {
+        "files": "*.yml",
+        "options": {
+          "tabWidth": 2,
+          "singleQuote": false
+        }
+      }
+    ]
+  },
+  "stylelint": {
+    "extends": [
+      "stylelint-config-standard"
+    ],
+    "plugins": [
+      "stylelint-order"
+    ],
+    "rules": {
+      "declaration-block-no-duplicate-properties": true,
+      "declaration-block-no-shorthand-property-overrides": true,
+      "block-no-empty": true,
+      "color-no-invalid-hex": true,
+      "font-family-no-duplicate-names": true,
+      "function-calc-no-unspaced-operator": true,
+      "no-duplicate-selectors": true,
+      "no-empty-source": true,
+      "no-descending-specificity": null,
+      "selector-class-pattern": null,
+      "custom-property-pattern": null,
+      "value-keyword-case": null,
+      "property-no-vendor-prefix": null,
+      "declaration-empty-line-before": null,
+      "comment-empty-line-before": null,
+      "at-rule-no-unknown": [true, {
+        "ignoreAtRules": ["tailwind", "apply", "variants", "responsive", "screen", "layer"]
+      }],
+      "order/properties-alphabetical-order": null,
+      "order/properties-order": [
+        "content",
+        "position",
+        "top",
+        "right",
+        "bottom",
+        "left",
+        "z-index",
+        "display",
+        "flex",
+        "flex-direction",
+        "flex-wrap",
+        "flex-flow",
+        "flex-grow",
+        "flex-shrink",
+        "flex-basis",
+        "align-items",
+        "align-self",
+        "align-content",
+        "justify-content",
+        "justify-items",
+        "justify-self",
+        "gap",
+        "row-gap",
+        "column-gap",
+        "grid",
+        "grid-template",
+        "grid-template-columns",
+        "grid-template-rows",
+        "grid-template-areas",
+        "grid-auto-flow",
+        "grid-auto-columns",
+        "grid-auto-rows",
+        "grid-column",
+        "grid-row",
+        "grid-area",
+        "order",
+        "float",
+        "clear",
+        "box-sizing",
+        "width",
+        "min-width",
+        "max-width",
+        "height",
+        "min-height",
+        "max-height",
+        "margin",
+        "margin-top",
+        "margin-right",
+        "margin-bottom",
+        "margin-left",
+        "padding",
+        "padding-top",
+        "padding-right",
+        "padding-bottom",
+        "padding-left",
+        "overflow",
+        "overflow-x",
+        "overflow-y",
+        "border",
+        "border-width",
+        "border-style",
+        "border-color",
+        "border-radius",
+        "border-top",
+        "border-right",
+        "border-bottom",
+        "border-left",
+        "outline",
+        "background",
+        "background-color",
+        "background-image",
+        "background-repeat",
+        "background-position",
+        "background-size",
+        "background-clip",
+        "color",
+        "font",
+        "font-family",
+        "font-size",
+        "font-weight",
+        "font-style",
+        "font-variant",
+        "line-height",
+        "letter-spacing",
+        "text-align",
+        "text-decoration",
+        "text-transform",
+        "text-indent",
+        "text-overflow",
+        "text-shadow",
+        "white-space",
+        "word-break",
+        "word-spacing",
+        "word-wrap",
+        "vertical-align",
+        "list-style",
+        "cursor",
+        "pointer-events",
+        "user-select",
+        "visibility",
+        "opacity",
+        "box-shadow",
+        "transform",
+        "transition",
+        "animation",
+        "appearance",
+        "will-change"
+      ]
+    },
+    "overrides": [
+      {
+        "files": ["**/*.scss"],
+        "customSyntax": "postcss-scss"
+      }
+    ]
+  },
+  "postcss": {
+    "plugins": {
+      "postcss-import": {},
+      "postcss-nested": {},
+      "postcss-custom-media": {},
+      "postcss-preset-env": {
+        "stage": 2,
+        "features": {
+          "nesting-rules": true,
+          "custom-media-queries": true,
+          "media-query-ranges": true
+        },
+        "autoprefixer": {
+          "flexbox": "no-2009",
+          "grid": "autoplace"
+        }
+      },
+      "cssnano": {
+        "preset": ["default", {
+          "discardComments": {
+            "removeAll": true
+          },
+          "normalizeWhitespace": true,
+          "colormin": true,
+          "reduceIdents": false,
+          "zindex": false
+        }]
+      }
+    }
+  },
+  "bundlesize": [
+    {
+      "path": "dist/assets/*.js",
+      "maxSize": "250 kB",
+      "compression": "gzip"
+    },
+    {
+      "path": "dist/assets/*.css",
+      "maxSize": "50 kB",
+      "compression": "gzip"
+    },
+    {
+      "path": "dist/index.html",
+      "maxSize": "10 kB"
+    }
+  ],
+  "msw": {
+    "workerDirectory": "public"
+  },
+  "pnpm": {
+    "peerDependencyRules": {
+      "allowedVersions": {
+        "react": "18",
+        "react-dom": "18"
+      },
+      "ignoreMissing": [
+        "@babel/*",
+        "webpack"
+      ]
+    },
+    "overrides": {
+      "semver": ">=7.5.4",
+      "optionator": ">=0.9.3",
+      "tough-cookie": ">=4.1.3"
+    }
+  },
+  "overrides": {
+    "semver": ">=7.5.4",
+    "optionator": ">=0.9.3",
+    "tough-cookie": ">=4.1.3",
+    "word-wrap": ">=1.2.5",
+    "xml2js": ">=0.5.0",
+    "json5": ">=2.2.3",
+    "http-cache-semantics": ">=4.1.1"
+  },
+  "resolutions": {
+    "semver": ">=7.5.4",
+    "optionator": ">=0.9.3",
+    "tough-cookie": ">=4.1.3",
+    "json5": ">=2.2.3"
+  },
+  "volta": {
+    "node": "20.10.0",
+    "npm": "10.2.5"
+  },
+  "packageManager": "npm@10.2.5",
+  "sideEffects": [
+    "*.css",
+    "*.scss",
+    "*.less"
+  ]
 }
